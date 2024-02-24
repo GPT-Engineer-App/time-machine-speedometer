@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Box, Text, Progress, Center, VStack, Image } from "@chakra-ui/react";
+import { Box, Text, Center, VStack, Image } from "@chakra-ui/react";
 
 const Index = () => {
   const startDate = new Date(2024, 1, 24); // February 24, 2024
@@ -24,16 +24,17 @@ const Index = () => {
           Back to the Future Speedometer
         </Text>
         <Text fontSize="lg">{`Today's date: ${today.toLocaleDateString()}`}</Text>
-        <Box width="80%" maxW="400px" p={4} borderWidth="1px" borderRadius="lg">
-          <Image src="https://images.unsplash.com/photo-1485740112426-0c2549fa8c86?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MDcxMzJ8MHwxfHNlYXJjaHwxfHxiYWNrJTIwdG8lMjB0aGUlMjBmdXR1cmUlMjBzcGVlZG9tZXRlcnxlbnwwfHx8fDE3MDg4MTc4MDd8MA&ixlib=rb-4.0.3&q=80&w=1080" borderRadius="md" />
-          <Progress value={((mph - 44) / (88 - 44)) * 100} size="lg" colorScheme="red" mt={2} />
-          <Center mt={4}>
-            <Text fontSize="2xl" fontWeight="bold">
-              {mph} mph
+        <Box position="relative" width="80%" maxW="400px">
+          <Image src="https://vignette.wikia.nocookie.net/bttf/images/4/4f/Digital-speedometer.jpg/revision/latest?cb=20080915235401" borderRadius="md" />
+          <Center position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)">
+            <Text fontSize="4xl" fontWeight="bold" color="white">
+              {mph}
             </Text>
           </Center>
         </Box>
-        <Text fontSize="md">{mph < 88 ? `Speed will increase to ${mph + 1} mph tomorrow` : "We've reached 88 mph!"}</Text>
+        <Text fontSize="md" color="white">
+          {mph < 88 ? `Speed will increase to ${mph + 1} mph tomorrow` : "We've reached 88 mph!"}
+        </Text>
       </VStack>
     </Center>
   );
