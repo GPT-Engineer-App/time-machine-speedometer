@@ -27,7 +27,7 @@ const Index = () => {
         <Box position="relative" width="80%" maxW="400px">
           <Image src="https://vignette.wikia.nocookie.net/bttf/images/4/4f/Digital-speedometer.jpg/revision/latest?cb=20080915235401" borderRadius="md" />
           <Center position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)">
-            <Text fontSize="4xl" fontWeight="bold" color="white">
+            <Text fontSize="4xl" fontWeight="bold" color="yellow">
               {mph}
             </Text>
           </Center>
